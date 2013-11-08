@@ -99,9 +99,8 @@
 
     [pdfScrollView scrollViewDidEndZooming:scrollView withView:view atScale:scale];
     
-    pdfScrollView.minimumZoomScale = MAXZOOMSCALE/scale;
-    pdfScrollView.maximumZoomScale = MINZOOMSCALE*scale;
-    
+    pdfScrollView.minimumZoomScale /= scale;
+    pdfScrollView.maximumZoomScale /= scale;
 }
 
 
